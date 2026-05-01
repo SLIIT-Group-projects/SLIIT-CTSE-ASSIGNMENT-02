@@ -1,0 +1,92 @@
+
+[2026-05-01 16:20:18] [Fitness Profile Agent] INPUT: {'weight_kg': 70.0, 'height_cm': 175.0, 'goal': 'maintain', 'activity_level': 'moderate', 'diet_type': 'vegetarian', 'allergies': 'none'}
+[2026-05-01 16:20:18] [Fitness Profile Agent] OUTPUT: {'weight_kg': 70.0, 'height_cm': 175.0, 'goal': 'maintain', 'activity_level': 'moderate', 'diet_type': 'vegetarian', 'allergies': [], 'bmi': 22.86, 'bmi_category': 'Normal weight'}
+[2026-05-01 16:20:18] [Calorie & Nutrition Agent] INPUT: {'weight_kg': 70.0, 'height_cm': 175.0, 'goal': 'maintain', 'activity_level': 'moderate', 'diet_type': 'vegetarian', 'allergies': [], 'bmi': 22.86, 'bmi_category': 'Normal weight'}
+[2026-05-01 16:20:18] [Calorie & Nutrition Agent] OUTPUT: {'daily_calories': 2387, 'protein_g': 179, 'carbs_g': 239, 'fats_g': 80}
+[2026-05-01 16:20:18] [Meal Plan Generator Agent] INPUT: {'diet_type': 'vegetarian', 'allergies': [], 'nutrition_targets': {'daily_calories': 2387, 'protein_g': 179, 'carbs_g': 239, 'fats_g': 80}}
+[2026-05-01 16:20:18] [Meal Plan Generator Agent] OUTPUT: {'breakfast': ['Oats with banana', 'Greek yogurt with berries'], 'lunch': ['Brown rice + dal + salad', 'Quinoa bowl with chickpeas'], 'snack': ['Mixed nuts', 'Fruit bowl'], 'dinner': ['Vegetable soup + whole-grain bread', 'Paneer curry + roti']}
+[2026-05-01 16:20:18] [Grocery & Workout Plan Agent] INPUT: {'goal': 'maintain', 'meal_plan': {'breakfast': ['Oats with banana', 'Greek yogurt with berries'], 'lunch': ['Brown rice + dal + salad', 'Quinoa bowl with chickpeas'], 'snack': ['Mixed nuts', 'Fruit bowl'], 'dinner': ['Vegetable soup + whole-grain bread', 'Paneer curry + roti']}}
+[2026-05-01 16:20:18] [Grocery & Workout Plan Agent] OUTPUT: {'grocery_list_count': 23, 'workout_days': 7, 'report_saved': 'outputs/final_report.txt'}
+[2026-05-01 16:23:46] [Fitness Profile Agent] [START] Execution started
+[2026-05-01 16:23:46] [Fitness Profile Agent] [INPUT] {"activity_level": "moderate", "allergies": "none", "diet_type": "vegetarian", "goal": "maintain", "height_cm": 175.0, "weight_kg": 70.0}
+[2026-05-01 16:23:46] [Fitness Profile Agent] [OUTPUT] {"activity_level": "moderate", "allergies": [], "bmi": 22.86, "bmi_category": "Normal weight", "diet_type": "vegetarian", "goal": "maintain", "height_cm": 175.0, "weight_kg": 70.0}
+[2026-05-01 16:23:46] [Fitness Profile Agent] [END] Execution completed
+[2026-05-01 16:23:46] [Calorie & Nutrition Agent] [START] Execution started
+[2026-05-01 16:23:46] [Calorie & Nutrition Agent] [INPUT] {"activity_level": "moderate", "allergies": [], "bmi": 22.86, "bmi_category": "Normal weight", "diet_type": "vegetarian", "goal": "maintain", "height_cm": 175.0, "weight_kg": 70.0}
+[2026-05-01 16:23:46] [Calorie & Nutrition Agent] [OUTPUT] {"carbs_g": 239, "daily_calories": 2387, "fats_g": 80, "protein_g": 179}
+[2026-05-01 16:23:46] [Calorie & Nutrition Agent] [END] Execution completed
+[2026-05-01 16:23:46] [Meal Plan Generator Agent] [START] Execution started
+[2026-05-01 16:23:46] [Meal Plan Generator Agent] [INPUT] {"allergies": [], "diet_type": "vegetarian", "nutrition_targets": {"carbs_g": 239, "daily_calories": 2387, "fats_g": 80, "protein_g": 179}}
+[2026-05-01 16:23:46] [Meal Plan Generator Agent] [OUTPUT] {"breakfast": ["Oats with banana", "Greek yogurt with berries"], "dinner": ["Vegetable soup + whole-grain bread", "Paneer curry + roti"], "lunch": ["Brown rice + dal + salad", "Quinoa bowl with chickpeas"], "snack": ["Mixed nuts", "Fruit bowl"]}
+[2026-05-01 16:23:46] [Meal Plan Generator Agent] [END] Execution completed
+[2026-05-01 16:23:46] [Grocery & Workout Plan Agent] [START] Execution started
+[2026-05-01 16:23:46] [Grocery & Workout Plan Agent] [INPUT] {"goal": "maintain", "meal_plan": {"breakfast": ["Oats with banana", "Greek yogurt with berries"], "dinner": ["Vegetable soup + whole-grain bread", "Paneer curry + roti"], "lunch": ["Brown rice + dal + salad", "Quinoa bowl with chickpeas"], "snack": ["Mixed nuts", "Fruit bowl"]}}
+[2026-05-01 16:23:46] [Grocery & Workout Plan Agent] [OUTPUT] {"grocery_list_count": 23, "report_saved": "outputs/final_report.txt", "workout_days": 7}
+[2026-05-01 16:23:46] [Grocery & Workout Plan Agent] [END] Execution completed
+[2026-05-01 16:26:10] [Fitness Profile Agent] [START] Execution started
+[2026-05-01 16:26:10] [Fitness Profile Agent] [INPUT] {"activity_level": "light", "allergies": "none", "diet_type": "non-vegetarian", "goal": "lose weight", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:26:10] [Fitness Profile Agent] [OUTPUT] {"activity_level": "light", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "non-vegetarian", "goal": "lose weight", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:26:10] [Fitness Profile Agent] [END] Execution completed
+[2026-05-01 16:26:10] [Calorie & Nutrition Agent] [START] Execution started
+[2026-05-01 16:26:10] [Calorie & Nutrition Agent] [INPUT] {"activity_level": "light", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "non-vegetarian", "goal": "lose weight", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:26:10] [Calorie & Nutrition Agent] [OUTPUT] {"carbs_g": 150, "daily_calories": 1718, "fats_g": 57, "protein_g": 150}
+[2026-05-01 16:26:10] [Calorie & Nutrition Agent] [END] Execution completed
+[2026-05-01 16:26:10] [Meal Plan Generator Agent] [START] Execution started
+[2026-05-01 16:26:10] [Meal Plan Generator Agent] [INPUT] {"allergies": [], "diet_type": "non-vegetarian", "nutrition_targets": {"carbs_g": 150, "daily_calories": 1718, "fats_g": 57, "protein_g": 150}}
+[2026-05-01 16:26:10] [Meal Plan Generator Agent] [OUTPUT] {"breakfast": ["Egg omelette + toast", "Oats with milk"], "dinner": ["Baked fish + sweet potato", "Chicken soup + bread"], "lunch": ["Grilled chicken + rice + veggies", "Tuna salad bowl"], "snack": ["Boiled eggs", "Mixed nuts"]}
+[2026-05-01 16:26:10] [Meal Plan Generator Agent] [END] Execution completed
+[2026-05-01 16:26:10] [Grocery & Workout Plan Agent] [START] Execution started
+[2026-05-01 16:26:10] [Grocery & Workout Plan Agent] [INPUT] {"goal": "lose weight", "meal_plan": {"breakfast": ["Egg omelette + toast", "Oats with milk"], "dinner": ["Baked fish + sweet potato", "Chicken soup + bread"], "lunch": ["Grilled chicken + rice + veggies", "Tuna salad bowl"], "snack": ["Boiled eggs", "Mixed nuts"]}}
+[2026-05-01 16:26:10] [Grocery & Workout Plan Agent] [OUTPUT] {"grocery_list_count": 22, "report_saved": "outputs/final_report.txt", "workout_days": 7}
+[2026-05-01 16:26:10] [Grocery & Workout Plan Agent] [END] Execution completed
+[2026-05-01 16:28:47] [Fitness Profile Agent] [START] Execution started
+[2026-05-01 16:28:47] [Fitness Profile Agent] [INPUT] {"activity_level": "active", "allergies": "none", "diet_type": "non-vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:28:47] [Fitness Profile Agent] [OUTPUT] {"activity_level": "active", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "non-vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:28:47] [Fitness Profile Agent] [END] Execution completed
+[2026-05-01 16:28:47] [Calorie & Nutrition Agent] [START] Execution started
+[2026-05-01 16:28:47] [Calorie & Nutrition Agent] [INPUT] {"activity_level": "active", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "non-vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:28:47] [Calorie & Nutrition Agent] [OUTPUT] {"carbs_g": 333, "daily_calories": 2956, "fats_g": 82, "protein_g": 222}
+[2026-05-01 16:28:47] [Calorie & Nutrition Agent] [END] Execution completed
+[2026-05-01 16:28:47] [Meal Plan Generator Agent] [START] Execution started
+[2026-05-01 16:28:47] [Meal Plan Generator Agent] [INPUT] {"allergies": [], "diet_type": "non-vegetarian", "nutrition_targets": {"carbs_g": 333, "daily_calories": 2956, "fats_g": 82, "protein_g": 222}}
+[2026-05-01 16:28:47] [Meal Plan Generator Agent] [OUTPUT] {"breakfast": ["Egg omelette + toast", "Oats with milk"], "dinner": ["Baked fish + sweet potato", "Chicken soup + bread"], "lunch": ["Grilled chicken + rice + veggies", "Tuna salad bowl"], "snack": ["Boiled eggs", "Mixed nuts"]}
+[2026-05-01 16:28:47] [Meal Plan Generator Agent] [END] Execution completed
+[2026-05-01 16:28:47] [Grocery & Workout Plan Agent] [START] Execution started
+[2026-05-01 16:28:47] [Grocery & Workout Plan Agent] [INPUT] {"goal": "gain muscle", "meal_plan": {"breakfast": ["Egg omelette + toast", "Oats with milk"], "dinner": ["Baked fish + sweet potato", "Chicken soup + bread"], "lunch": ["Grilled chicken + rice + veggies", "Tuna salad bowl"], "snack": ["Boiled eggs", "Mixed nuts"]}}
+[2026-05-01 16:28:47] [Grocery & Workout Plan Agent] [OUTPUT] {"grocery_list_count": 22, "report_saved": "outputs/final_report.txt", "workout_days": 7}
+[2026-05-01 16:28:47] [Grocery & Workout Plan Agent] [END] Execution completed
+[2026-05-01 16:29:20] [Fitness Profile Agent] [START] Execution started
+[2026-05-01 16:29:20] [Fitness Profile Agent] [INPUT] {"activity_level": "active", "allergies": "none", "diet_type": "non-vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:29:20] [Fitness Profile Agent] [OUTPUT] {"activity_level": "active", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "non-vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:29:20] [Fitness Profile Agent] [END] Execution completed
+[2026-05-01 16:29:20] [Calorie & Nutrition Agent] [START] Execution started
+[2026-05-01 16:29:20] [Calorie & Nutrition Agent] [INPUT] {"activity_level": "active", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "non-vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:29:20] [Calorie & Nutrition Agent] [OUTPUT] {"carbs_g": 333, "daily_calories": 2956, "fats_g": 82, "protein_g": 222}
+[2026-05-01 16:29:20] [Calorie & Nutrition Agent] [END] Execution completed
+[2026-05-01 16:29:20] [Meal Plan Generator Agent] [START] Execution started
+[2026-05-01 16:29:20] [Meal Plan Generator Agent] [INPUT] {"allergies": [], "diet_type": "non-vegetarian", "nutrition_targets": {"carbs_g": 333, "daily_calories": 2956, "fats_g": 82, "protein_g": 222}}
+[2026-05-01 16:29:20] [Meal Plan Generator Agent] [OUTPUT] {"breakfast": ["Egg omelette + toast", "Oats with milk"], "dinner": ["Baked fish + sweet potato", "Chicken soup + bread"], "lunch": ["Grilled chicken + rice + veggies", "Tuna salad bowl"], "snack": ["Boiled eggs", "Mixed nuts"]}
+[2026-05-01 16:29:20] [Meal Plan Generator Agent] [END] Execution completed
+[2026-05-01 16:29:20] [Grocery & Workout Plan Agent] [START] Execution started
+[2026-05-01 16:29:20] [Grocery & Workout Plan Agent] [INPUT] {"goal": "gain muscle", "meal_plan": {"breakfast": ["Egg omelette + toast", "Oats with milk"], "dinner": ["Baked fish + sweet potato", "Chicken soup + bread"], "lunch": ["Grilled chicken + rice + veggies", "Tuna salad bowl"], "snack": ["Boiled eggs", "Mixed nuts"]}}
+[2026-05-01 16:29:20] [Grocery & Workout Plan Agent] [OUTPUT] {"grocery_list_count": 22, "report_saved": "outputs/final_report.txt", "workout_days": 7}
+[2026-05-01 16:29:20] [Grocery & Workout Plan Agent] [END] Execution completed
+[2026-05-01 16:30:08] [Fitness Profile Agent] [START] Execution started
+[2026-05-01 16:30:08] [Fitness Profile Agent] [INPUT] {"activity_level": "active", "allergies": "none", "diet_type": "vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:30:08] [Fitness Profile Agent] [OUTPUT] {"activity_level": "active", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:30:08] [Fitness Profile Agent] [END] Execution completed
+[2026-05-01 16:30:08] [Calorie & Nutrition Agent] [START] Execution started
+[2026-05-01 16:30:08] [Calorie & Nutrition Agent] [INPUT] {"activity_level": "active", "allergies": [], "bmi": 24.22, "bmi_category": "Normal weight", "diet_type": "vegetarian", "goal": "gain muscle", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:30:08] [Calorie & Nutrition Agent] [OUTPUT] {"carbs_g": 333, "daily_calories": 2956, "fats_g": 82, "protein_g": 222}
+[2026-05-01 16:30:08] [Calorie & Nutrition Agent] [END] Execution completed
+[2026-05-01 16:30:08] [Meal Plan Generator Agent] [START] Execution started
+[2026-05-01 16:30:08] [Meal Plan Generator Agent] [INPUT] {"allergies": [], "diet_type": "vegetarian", "nutrition_targets": {"carbs_g": 333, "daily_calories": 2956, "fats_g": 82, "protein_g": 222}}
+[2026-05-01 16:30:08] [Meal Plan Generator Agent] [OUTPUT] {"breakfast": ["Oats with banana", "Greek yogurt with berries"], "dinner": ["Vegetable soup + whole-grain bread", "Paneer curry + roti"], "lunch": ["Brown rice + dal + salad", "Quinoa bowl with chickpeas"], "snack": ["Mixed nuts", "Fruit bowl"]}
+[2026-05-01 16:30:08] [Meal Plan Generator Agent] [END] Execution completed
+[2026-05-01 16:30:08] [Grocery & Workout Plan Agent] [START] Execution started
+[2026-05-01 16:30:08] [Grocery & Workout Plan Agent] [INPUT] {"goal": "gain muscle", "meal_plan": {"breakfast": ["Oats with banana", "Greek yogurt with berries"], "dinner": ["Vegetable soup + whole-grain bread", "Paneer curry + roti"], "lunch": ["Brown rice + dal + salad", "Quinoa bowl with chickpeas"], "snack": ["Mixed nuts", "Fruit bowl"]}}
+[2026-05-01 16:30:08] [Grocery & Workout Plan Agent] [OUTPUT] {"grocery_list_count": 23, "report_saved": "outputs/final_report.txt", "workout_days": 7}
+[2026-05-01 16:30:08] [Grocery & Workout Plan Agent] [END] Execution completed
+[2026-05-01 16:36:50] [Fitness Profile Agent] [START] Execution started
+[2026-05-01 16:36:50] [Fitness Profile Agent] [INPUT] {"activity_level": "moderate", "allergies": "none", "diet_type": "vegetarian", "goal": "maintain", "height_cm": 170.0, "weight_kg": 70.0}
+[2026-05-01 16:36:54] [Fitness Profile Agent] [ERROR] Could not connect to Ollama. Start Ollama and ensure a model is pulled.
