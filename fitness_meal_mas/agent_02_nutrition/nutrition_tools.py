@@ -1,4 +1,4 @@
-"""Nutrition-related tool functions."""
+"""Nutrition-related tool functions (Agent 2)."""
 
 
 def get_activity_multiplier(activity_level: str) -> float:
@@ -56,4 +56,3 @@ def calculate_macros(daily_calories: int, goal: str) -> dict[str, int]:
     fats_g = int(round((daily_calories * f_ratio) / 9))
 
     return {"protein_g": protein_g, "carbs_g": carbs_g, "fats_g": fats_g}
-

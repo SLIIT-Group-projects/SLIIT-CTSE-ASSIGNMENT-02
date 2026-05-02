@@ -1,8 +1,8 @@
 """Meal Plan Generator Agent implementation."""
 
-from state.app_state import AppState
-from tools.llm_tools import call_ollama_json
-from tools.report_tools import log_agent_activity
+from shared.agent_logging import log_agent_activity
+from shared.app_state import AppState
+from shared.llm_tools import call_ollama_json
 
 
 def run_meal_plan_agent(state: AppState, model: str) -> None:
@@ -49,4 +49,3 @@ Input:
     except Exception as error:  # noqa: BLE001 - required for agent error logging
         log_agent_activity(agent_name, "ERROR", str(error))
         raise
-

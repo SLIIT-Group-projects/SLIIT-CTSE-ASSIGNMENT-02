@@ -1,4 +1,4 @@
-"""Fitness-related tool functions."""
+"""Fitness-related tool functions (Agent 1)."""
 
 
 def calculate_bmi(weight_kg: float, height_cm: float) -> float:
@@ -59,4 +59,3 @@ def normalize_allergies(allergies: str) -> list[str]:
     if allergies in {"none", "no", "n/a"}:
         return []
     return [item.strip() for item in allergies.split(",") if item.strip()]
-

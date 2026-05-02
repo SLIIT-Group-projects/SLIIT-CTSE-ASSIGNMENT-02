@@ -8,14 +8,31 @@ A local, rule-based Python CLI Multi-Agent System that generates:
 
 ## Project Structure
 
+Individual agents live in numbered folders (agent + domain tools per member). Shared infrastructure (`AppState`, Ollama JSON client, unified log path) sits under `shared/`.
+
 ```
 fitness_meal_mas/
-├── main.py
+├── main.py                 # Runs agents 1→2→3→4 in order
 ├── requirements.txt
 ├── README.md
-├── agents/
-├── tools/
-├── state/
+├── shared/
+│   ├── app_state.py        # Shared blackboard state
+│   ├── paths.py            # logs/ and outputs/ paths
+│   ├── llm_tools.py        # Ollama JSON calls (all agents)
+│   └── agent_logging.py    # Timestamped agent_logs.txt
+├── agent_01_fitness_profile/
+│   ├── agent.py
+│   └── fitness_tools.py
+├── agent_02_nutrition/
+│   ├── agent.py
+│   └── nutrition_tools.py
+├── agent_03_meal_plan/
+│   ├── agent.py
+│   └── meal_plan_tools.py
+├── agent_04_grocery_workout/
+│   ├── agent.py
+│   ├── grocery_tools.py
+│   └── report_tools.py
 ├── logs/
 ├── outputs/
 └── tests/

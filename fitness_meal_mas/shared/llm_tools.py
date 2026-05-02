@@ -49,4 +49,3 @@ def call_ollama_json(
     if not model_text:
         raise ValueError("Ollama returned an empty response.")
     return _extract_json_object(model_text)
-

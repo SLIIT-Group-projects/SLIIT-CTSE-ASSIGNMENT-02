@@ -3,17 +3,17 @@
 import os
 from collections.abc import Callable
 
-from agents.fitness_profile_agent import run_fitness_profile_agent
-from agents.grocery_workout_agent import run_grocery_workout_agent
-from agents.meal_plan_agent import run_meal_plan_agent
-from agents.nutrition_agent import run_nutrition_agent
-from state.app_state import AppState
-from tools.fitness_tools import (
+from agent_01_fitness_profile import run_fitness_profile_agent
+from agent_01_fitness_profile.fitness_tools import (
     normalize_activity,
     normalize_allergies,
     normalize_diet_type,
     normalize_goal,
 )
+from agent_02_nutrition import run_nutrition_agent
+from agent_03_meal_plan import run_meal_plan_agent
+from agent_04_grocery_workout import run_grocery_workout_agent
+from shared.app_state import AppState
 
 
 def _get_positive_float(prompt_text: str) -> float:

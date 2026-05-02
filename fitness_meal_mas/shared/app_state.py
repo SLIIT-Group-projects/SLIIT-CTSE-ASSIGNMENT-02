@@ -13,4 +13,3 @@ class AppState:
     meal_plan: Dict[str, List[str]] = field(default_factory=dict)
     grocery_list: List[str] = field(default_factory=list)
     workout_plan: List[str] = field(default_factory=list)
-

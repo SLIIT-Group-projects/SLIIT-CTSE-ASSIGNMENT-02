@@ -2,13 +2,13 @@
 
 import unittest
 
-from tools.fitness_tools import calculate_bmi
-from tools.meal_tools import generate_grocery_list
-from tools.nutrition_tools import (
+from agent_01_fitness_profile.fitness_tools import calculate_bmi
+from agent_02_nutrition.nutrition_tools import (
     adjust_calories_for_goal,
     calculate_macros,
     estimate_maintenance_calories,
 )
+from agent_04_grocery_workout.grocery_tools import generate_grocery_list
 
 
 class TestFitnessTools(unittest.TestCase):

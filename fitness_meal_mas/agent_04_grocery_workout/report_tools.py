@@ -1,56 +1,8 @@
-"""Logging, workout, and reporting tool functions."""
+"""Final report formatting and persistence (Agent 4)."""
 
-import json
-from datetime import datetime
-from pathlib import Path
 from typing import Any
 
-LOG_FILE = Path(__file__).resolve().parents[1] / "logs" / "agent_logs.txt"
-REPORT_FILE = Path(__file__).resolve().parents[1] / "outputs" / "final_report.txt"
-
-
-def log_agent_activity(agent_name: str, data_type: str, payload: Any) -> None:
-    """Append timestamped agent input/output logs."""
-    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    rendered_payload = payload
-    if isinstance(payload, (dict, list, tuple)):
-        rendered_payload = json.dumps(payload, ensure_ascii=True, sort_keys=True)
-    with LOG_FILE.open("a", encoding="utf-8") as file:
-        file.write(f"[{timestamp}] [{agent_name}] [{data_type}] {rendered_payload}\n")
-
-
-def generate_workout_plan(goal: str) -> list[str]:
-    """Return a simple 7-day workout schedule based on goal."""
-    if goal == "lose weight":
-        return [
-            "Day 1: Brisk walk 45 min + core 15 min",
-            "Day 2: Full body HIIT 30 min",
-            "Day 3: Yoga + mobility 40 min",
-            "Day 4: Jogging 35 min + bodyweight circuit",
-            "Day 5: Cycling 45 min",
-            "Day 6: Strength training (light-moderate) 40 min",
-            "Day 7: Active recovery walk 30 min",
-        ]
-    if goal == "gain muscle":
-        return [
-            "Day 1: Upper body strength",
-            "Day 2: Lower body strength",
-            "Day 3: Core + light cardio",
-            "Day 4: Push day",
-            "Day 5: Pull day",
-            "Day 6: Legs + mobility",
-            "Day 7: Rest and stretching",
-        ]
-    return [
-        "Day 1: Full body strength 35 min",
-        "Day 2: Walk or jog 30 min",
-        "Day 3: Yoga 30 min",
-        "Day 4: Full body strength 35 min",
-        "Day 5: Cycling or brisk walk 30 min",
-        "Day 6: Core + mobility 25 min",
-        "Day 7: Active recovery",
-    ]
+from shared.paths import REPORT_FILE
 
 
 def build_final_report(state_data: dict[str, Any]) -> str:
@@ -107,4 +59,3 @@ def save_final_report(report_text: str) -> None:
     REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with REPORT_FILE.open("w", encoding="utf-8") as file:
         file.write(report_text)
-

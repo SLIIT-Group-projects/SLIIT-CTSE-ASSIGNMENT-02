@@ -1,7 +1,10 @@
 """Fitness Profile Agent implementation."""
 
-from state.app_state import AppState
-from tools.fitness_tools import (
+from shared.agent_logging import log_agent_activity
+from shared.app_state import AppState
+from shared.llm_tools import call_ollama_json
+
+from .fitness_tools import (
     calculate_bmi,
     get_bmi_category,
     normalize_activity,
@@ -9,8 +12,6 @@ from tools.fitness_tools import (
     normalize_diet_type,
     normalize_goal,
 )
-from tools.llm_tools import call_ollama_json
-from tools.report_tools import log_agent_activity
 
 
 def run_fitness_profile_agent(state: AppState, user_data: dict, model: str) -> None:
@@ -64,4 +65,3 @@ Input:
     except Exception as error:  # noqa: BLE001 - required for agent error logging
         log_agent_activity(agent_name, "ERROR", str(error))
         raise
-
